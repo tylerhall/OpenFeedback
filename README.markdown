@@ -5,7 +5,7 @@ OpenFeedback is a Cocoa framework which allows your users to submit bug reports,
 INSTALL
 -------
 
-1. Linking OpenFeedback to your project
+**Linking OpenFeedback to your project**
 
  * Download and compile the lastest OpenFeedback source from [GitHub](http://github.com/tylerhall/OpenFeedback/tree/master).
  * Drag the compiled OpenFeedback.framework into the Linked Frameworks folder of your XCode project. Be sure to check the "copy items into the destination group's folder" box in the sheet that appears.
@@ -13,7 +13,8 @@ INSTALL
  * Choose "Frameworks" as the destination for your new build phase.
  * Click the disclosure triangle next to your app's target, and drag OpenFeedback.framework from the Linked Frameworks folder to the Copy Files build phase you just created.
 
-2. Create the OpenFeedback object
+**Create the OpenFeedback object**
+
  * Open up your MainMenu.nib in Interface Builder.
  * Go to File > Read Class Files... and choose all the files inside OpenFeedback.framework/Headers.
  * Drag a generic Object (a blue cube) from the Library to your document.
