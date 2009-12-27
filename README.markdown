@@ -28,14 +28,14 @@ You're done!
 UPDATES
 -------
 
-Code is hosted at GitHub: [http://github.com/tylerhall/projectname](http://github.com/tylerhall/projectname)  
+Code is hosted at GitHub: [http://github.com/tylerhall/OpenFeedback](http://github.com/tylerhall/OpenFeedback)  
 
 LICENSE
 -------
 
 The MIT License
 
-Copyright (c) 2009 Tyler Hall <tylerhall AT gmail DOT com>
+Copyright (c) 2010 Tyler Hall <tylerhall AT gmail DOT com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
