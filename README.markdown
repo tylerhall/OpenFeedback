@@ -2,6 +2,12 @@ OpenFeedback
 =========
 OpenFeedback is a Cocoa framework which allows your users to submit bug reports, feature requests, and ask support questions from directly within your application. It can store feedback in [Shine](http://github.com/tylerhall/Shine/tree/master) or connect to your own custom server-side script. And, like [Sparkle](http://sparkle.andymatuschak.org/), OpenFeedback can be integrated into your application in just a few minutes - no code required.
 
+Screenshots
+-------
+[![Screenshot 1](http://static.clickontyler.com/blog/of-support-sm.png)](http://static.clickontyler.com/blog/of-support.png)
+[![Screenshot 2](http://static.clickontyler.com/blog/of-feature-sm.png)](http://static.clickontyler.com/blog/of-feature.png)
+[![Screenshot 3](http://static.clickontyler.com/blog/of-bug-sm.png)](http://static.clickontyler.com/blog/of-bug.png)
+
 INSTALL
 -------
 
