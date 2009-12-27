@@ -7,19 +7,19 @@ INSTALL
 
 **Linking OpenFeedback to your project**
 
- * Download and compile the lastest OpenFeedback source from [GitHub](http://github.com/tylerhall/OpenFeedback/tree/master).
- * Drag the compiled OpenFeedback.framework into the Linked Frameworks folder of your XCode project. Be sure to check the "copy items into the destination group's folder" box in the sheet that appears.
- * Create a new Copy Files build phase for your app's target (Project > New Build Phase > New Copy Files Build Phase).
- * Choose "Frameworks" as the destination for your new build phase.
- * Click the disclosure triangle next to your app's target, and drag OpenFeedback.framework from the Linked Frameworks folder to the Copy Files build phase you just created.
+ 1. [Download](http://github.com/tylerhall/OpenFeedback/archives/master) and compile the lastest OpenFeedback source from [GitHub](http://github.com/tylerhall/OpenFeedback/tree/master).
+ 2. Drag the compiled OpenFeedback.framework into the Linked Frameworks folder of your XCode project. Be sure to check the "copy items into the destination group's folder" box in the sheet that appears.
+ 3. Create a new Copy Files build phase for your app's target (Project > New Build Phase > New Copy Files Build Phase).
+ 4. Choose "Frameworks" as the destination for your new build phase.
+ 5. Click the disclosure triangle next to your app's target, and drag OpenFeedback.framework from the Linked Frameworks folder to the Copy Files build phase you just created.
 
 **Create the OpenFeedback object**
 
- * Open up your MainMenu.nib in Interface Builder.
- * Go to File > Read Class Files... and choose all the files inside OpenFeedback.framework/Headers.
- * Drag a generic Object (a blue cube) from the Library to your document.
- * Select this object in your document window, and under the Information tab of the inspector, set the class of the object to OpenFeedback. This will instantiate your OpenFeedback object.
- * Make a "Send Feedback..." menu item in the application menu; set its target to the OpenFeedback instance and its action to the appropriate presentFeedbackPanel...: action.
+ 1. Open up your MainMenu.nib in Interface Builder.
+ 2. Go to File > Read Class Files... and choose all the files inside OpenFeedback.framework/Headers.
+ 3. Drag a generic Object (a blue cube) from the Library to your document.
+ 4. Select this object in your document window, and under the Information tab of the inspector, set the class of the object to OpenFeedback. This will instantiate your OpenFeedback object.
+ 5. Make a "Send Feedback..." menu item in the application menu; set its target to the OpenFeedback instance and its action to the appropriate presentFeedbackPanel...: action.
 
 You're done!
 
