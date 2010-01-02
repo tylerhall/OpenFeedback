@@ -207,6 +207,11 @@ NSString *urlEscape(NSString *str)
 	[alert setInformativeText:@"Your feedback has been sent successfully. Thank you!"];
 	[alert setAlertStyle:NSWarningAlertStyle];
 	[alert beginSheetModalForWindow:[self window] modalDelegate:self didEndSelector:@selector(sheetDidEnd:returnCode:contextInfo:) contextInfo:@"feedbackSentSuccessfully"];
+
+	[txtQuestion setString:@""];
+	[txtFeature setString:@""];
+	[txtWhatHappened setString:@""];
+	[txtStepsToReproduce setString:@""];
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
