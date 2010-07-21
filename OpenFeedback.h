@@ -16,5 +16,6 @@
 - (IBAction)presentFeedbackPanelForSupport:(id)sender;
 - (IBAction)presentFeedbackPanelForFeature:(id)sender;
 - (IBAction)presentFeedbackPanelForBug:(id)sender;
+- (void)presentFeedbackPanelIfCrashed;
 
 @end
