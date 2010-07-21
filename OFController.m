@@ -46,12 +46,14 @@
 - (IBAction)presentFeedbackPanelForBug:(id)sender
 {
 	_crashReportMode = NO;
+	[tabs setLabel:NSLocalizedString(@"Bug Report", nil) forSegment:2];
 	[self presentFeedbackPanelForBugOrCrash];
 }
 
 - (void)presentFeedbackPanelForCrash:(NSString *)report {
 	_crashReportMode = YES;
 	[self loadWindow];	// need to load otherwise IB links are not initalized
+	[tabs setLabel:NSLocalizedString(@"Crash Report", nil) forSegment:2];
 	NSString *crashDescription = NSLocalizedString(@"\n\n\n\nThe text below is application's crash log, please leave it unchanged to help us determine possible cause!\n\n%@", nil);
 	[txtCrashDescription setString:[NSString stringWithFormat:crashDescription, report]];
 	[self presentFeedbackPanelForBugOrCrash];
