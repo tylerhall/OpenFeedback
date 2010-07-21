@@ -1,12 +1,13 @@
 OpenFeedback
 =========
-OpenFeedback is a Cocoa framework which allows your users to submit bug reports, feature requests, and ask support questions from directly within your application. It can store feedback in [Shine](http://github.com/tylerhall/Shine/tree/master) or connect to your own custom server-side script. And, like [Sparkle](http://sparkle.andymatuschak.org/), OpenFeedback can be integrated into your application in just a few minutes - no code required.
+OpenFeedback is a Cocoa framework which allows your users to submit bug reports, feature requests, and ask support questions from directly within your application. It can also automatically submit crash reports from your app on restart. All of this data can be stored in [Shine](http://github.com/tylerhall/Shine/tree/master) or connected to your own custom server-side script. And, like [Sparkle](http://sparkle.andymatuschak.org/), OpenFeedback can be integrated into your application in just a few minutes - no code required.
 
 Screenshots
 -------
-[![Screenshot 1](http://static.clickontyler.com/blog/of-support-sm.png)](http://static.clickontyler.com/blog/of-support.png)
-[![Screenshot 2](http://static.clickontyler.com/blog/of-feature-sm.png)](http://static.clickontyler.com/blog/of-feature.png)
-[![Screenshot 3](http://static.clickontyler.com/blog/of-bug-sm.png)](http://static.clickontyler.com/blog/of-bug.png)
+![Support Request](http://cdn.tyler.fm/blog/of-question.png)
+![Feature Request](http://cdn.tyler.fm/blog/of-feature.png)
+![Bug Report](http://cdn.tyler.fm/blog/of-bug.png)
+![Crash Report](http://cdn.tyler.fm/blog/of-crash.png)
 
 INSTALL
 -------
@@ -53,15 +54,18 @@ UPDATES
 
 Code is hosted at GitHub:
 
-Original [http://github.com/tylerhall/OpenFeedback](http://github.com/tylerhall/OpenFeedback)  
-Crash reporter [http://github.com/tomaz/OpenFeedback](http://github.com/tomaz/OpenFeedback)  
+[http://github.com/tylerhall/OpenFeedback](http://github.com/tylerhall/OpenFeedback)  
+
+Much love to [Tomaz](http://github.com/tomaz) for adding in the excellent crash reporting functionality.
 
 LICENSE
 -------
 
 The MIT License
 
-Copyright (c) 2010 Tyler Hall <tylerhall AT gmail DOT com>
+Original implementation copyright (c) 2010 [Tyler Hall](http://clickonideas.com).
+
+Other code portions written by [Tomaz](http://github.com/tomaz) and various contributors. (Please let me know if I've left off anyone's name.)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
