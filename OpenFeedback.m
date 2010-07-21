@@ -6,6 +6,7 @@
 //  Copyright 2009 Click On Tyler, LLC. All rights reserved.
 //
 
+#import "OFController.h"
 #import "OpenFeedback.h"
 
 static NSString *kGBLastCrashCheckTimeDefaultsKey = @"GBLastCrashCheckTime";

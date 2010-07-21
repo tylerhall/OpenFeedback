@@ -7,7 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "OFController.h"
+
+@class OFController;
 
 @interface OpenFeedback : NSObject {
 	OFController *windowController;
