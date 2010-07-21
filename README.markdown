@@ -31,10 +31,30 @@ You're done!
 
 (FYI: The above instrctions were pretty much copied verbatim from the [Sparkle wiki](http://sparkle.andymatuschak.org/documentation/pmwiki.php/Documentation/BasicSetup?from=Main.HomePage), as the setup process is identical.)
 
+WHAT'S NEW?
+-----------
+
+Added crash reporting. To use it, just send presentFeedbackPanelIfCrashed message to OpenFeedback instance sometime during your application startup (most often this will be in your application delegate's applicationDidFinishLaunching:). The method reads application's most recent crash report from the system log and presents feedback panel if found. Example:
+
+	#import <OpenFeedback/OpenFeedback.h>
+	
+	@implementation AppDelegate
+	
+	- (void)applicationDidFinishLaunching:(NSNotification *)notification {
+		[openFeedback presentFeedbackPanelIfCrashed];
+	}
+	
+	@end
+
+The easiest way to get to the OpenFeedback instance you've setup in IB (as described in INSTALL section above), is to add an IBOutlet to AppDelegate and link it within IB. Above example assumes you've linked it to AppDelegate's openFeedback ivar.
+
 UPDATES
 -------
 
-Code is hosted at GitHub: [http://github.com/tylerhall/OpenFeedback](http://github.com/tylerhall/OpenFeedback)  
+Code is hosted at GitHub:
+
+Original [http://github.com/tylerhall/OpenFeedback](http://github.com/tylerhall/OpenFeedback)  
+Crash reporter [http://github.com/tomaz/OpenFeedback](http://github.com/tomaz/OpenFeedback)  
 
 LICENSE
 -------
