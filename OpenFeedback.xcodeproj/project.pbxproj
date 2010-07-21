@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73C769D911F70D8E00621B76 /* OpenFeedback.framework in Copy Bundle Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* OpenFeedback.framework */; };
+		73C769DC11F70D9000621B76 /* OpenFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* OpenFeedback.framework */; };
+		73C769E611F70DE800621B76 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73C769E511F70DE800621B76 /* MainMenu.xib */; };
+		73C76A0111F70E5800621B76 /* GBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C76A0011F70E5800621B76 /* GBAppDelegate.m */; };
+		73C76A0911F70EDD00621B76 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C76A0811F70EDD00621B76 /* main.m */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 		C6216DF310E7675800264A67 /* OFController.h in Headers */ = {isa = PBXBuildFile; fileRef = C6216DED10E7675800264A67 /* OFController.h */; };
@@ -19,12 +24,42 @@
 		C6F7A56E10E74AF600A3BB17 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6F7A56D10E74AF600A3BB17 /* AddressBook.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		73C769D611F70D5B00621B76 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* OpenFeedback */;
+			remoteInfo = OpenFeedback;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		73C769E011F70DA000621B76 /* Copy Bundle Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				73C769D911F70D8E00621B76 /* OpenFeedback.framework in Copy Bundle Frameworks */,
+			);
+			name = "Copy Bundle Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		32DBCF5E0370ADEE00C91783 /* OpenFeedback_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenFeedback_Prefix.pch; sourceTree = "<group>"; };
+		73C769D011F70D4B00621B76 /* Tester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tester.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		73C769D211F70D4B00621B76 /* Tester-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tester-Info.plist"; sourceTree = "<group>"; };
+		73C769E511F70DE800621B76 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		73C769FF11F70E5800621B76 /* GBAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GBAppDelegate.h; sourceTree = "<group>"; };
+		73C76A0011F70E5800621B76 /* GBAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GBAppDelegate.m; sourceTree = "<group>"; };
+		73C76A0811F70EDD00621B76 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* OpenFeedback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenFeedback.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6216DED10E7675800264A67 /* OFController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OFController.h; sourceTree = "<group>"; };
@@ -39,6 +74,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		73C769CE11F70D4B00621B76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73C769DC11F70D9000621B76 /* OpenFeedback.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF560486A6940098B216 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -55,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5B0486A6940098B216 /* OpenFeedback.framework */,
+				73C769D011F70D4B00621B76 /* Tester.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,6 +106,7 @@
 		0867D691FE84028FC02AAC07 /* OpenFeedback */ = {
 			isa = PBXGroup;
 			children = (
+				73C769DF11F70DA000621B76 /* Tester */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				089C1665FE841158C02AAC07 /* Resources */,
@@ -130,6 +175,18 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		73C769DF11F70DA000621B76 /* Tester */ = {
+			isa = PBXGroup;
+			children = (
+				73C769D211F70D4B00621B76 /* Tester-Info.plist */,
+				73C769E511F70DE800621B76 /* MainMenu.xib */,
+				73C769FF11F70E5800621B76 /* GBAppDelegate.h */,
+				73C76A0011F70E5800621B76 /* GBAppDelegate.m */,
+				73C76A0811F70EDD00621B76 /* main.m */,
+			);
+			name = Tester;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -146,6 +203,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		73C769CF11F70D4B00621B76 /* Tester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73C769D511F70D4C00621B76 /* Build configuration list for PBXNativeTarget "Tester" */;
+			buildPhases = (
+				73C769CC11F70D4B00621B76 /* Resources */,
+				73C769E011F70DA000621B76 /* Copy Bundle Frameworks */,
+				73C769CD11F70D4B00621B76 /* Sources */,
+				73C769CE11F70D4B00621B76 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				73C769D711F70D5B00621B76 /* PBXTargetDependency */,
+			);
+			name = Tester;
+			productName = Tester;
+			productReference = 73C769D011F70D4B00621B76 /* Tester.app */;
+			productType = "com.apple.product-type.application";
+		};
 		8DC2EF4F0486A6940098B216 /* OpenFeedback */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "OpenFeedback" */;
@@ -179,11 +255,20 @@
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* OpenFeedback */,
+				73C769CF11F70D4B00621B76 /* Tester */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		73C769CC11F70D4B00621B76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73C769E611F70DE800621B76 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF520486A6940098B216 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -196,6 +281,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		73C769CD11F70D4B00621B76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73C76A0111F70E5800621B76 /* GBAppDelegate.m in Sources */,
+				73C76A0911F70EDD00621B76 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DC2EF540486A6940098B216 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -207,6 +301,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		73C769D711F70D5B00621B76 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DC2EF4F0486A6940098B216 /* OpenFeedback */;
+			targetProxy = 73C769D611F70D5B00621B76 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		089C1666FE841158C02AAC07 /* InfoPlist.strings */ = {
@@ -287,6 +389,54 @@
 			};
 			name = Release;
 		};
+		73C769D311F70D4C00621B76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Tester-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Tester;
+			};
+			name = Debug;
+		};
+		73C769D411F70D4C00621B76 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
+				INFOPLIST_FILE = "Tester-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = Tester;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -304,6 +454,15 @@
 			buildConfigurations = (
 				1DEB91B208733DA50010E9CD /* Debug */,
 				1DEB91B308733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73C769D511F70D4C00621B76 /* Build configuration list for PBXNativeTarget "Tester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73C769D311F70D4C00621B76 /* Debug */,
+				73C769D411F70D4C00621B76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
