@@ -188,10 +188,17 @@
 			[dict setValue:[btnImportance titleOfSelectedItem]  forKey:@"importance"];
 			break;
 			
-		case 2: // Bug Report
-            [dict setValue:@"bug" forKey:@"type"];
-			[dict setValue:[NSString stringWithFormat:@"What did you expect to happen?\n%@\n\nWhat steps will reproduce the problem?\n%@", [txtWhatHappened string], [txtStepsToReproduce string]] forKey:@"message"];
-			if([btnIsCritical state] == YES) [dict setValue:@"1" forKey:@"critical"];
+		case 2: // Bug or Crash Report
+			if (_crashReportMode) {
+				[dict setValue:@"bug" forKey:@"type"];
+				[dict setValue:[NSString stringWithFormat:@"Crash description:\n%@\n\nWhat steps will reproduce the problem?\n%@", [txtCrashDescription string], [txtCrashStepsToReproduce string]] forKey:@"message"];
+				[dict setValue:@"1" forKey:@"critical"];
+			}
+			else {
+				[dict setValue:@"bug" forKey:@"type"];
+				[dict setValue:[NSString stringWithFormat:@"What did you expect to happen?\n%@\n\nWhat steps will reproduce the problem?\n%@", [txtWhatHappened string], [txtStepsToReproduce string]] forKey:@"message"];
+				if([btnIsCritical state] == YES) [dict setValue:@"1" forKey:@"critical"];
+			}
 			break;
 	}
 
