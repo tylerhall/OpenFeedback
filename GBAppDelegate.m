@@ -11,4 +11,8 @@
 
 @implementation GBAppDelegate
 
+- (void)applicationDidFinishLaunching:(NSNotification *)notification {
+	[openFeedback presentFeedbackPanelIfCrashed];
+}
+
 @end
