@@ -15,4 +15,10 @@
 	[openFeedback presentFeedbackPanelIfCrashed];
 }
 
+- (IBAction)crash:(id)sender {
+    NSLog(@"Crashing....");
+	NSInteger *EXC_BAD_ACCESS_TRIGGER = 0;
+    *EXC_BAD_ACCESS_TRIGGER = 0;
+}
+
 @end

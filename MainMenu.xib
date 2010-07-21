@@ -1297,6 +1297,7 @@
 				<string key="NSWindowTitle">OpenFeedback Tester</string>
 				<string key="NSWindowClass">NSWindow</string>
 				<nil key="NSViewClass"/>
+				<string key="NSWindowContentMaxSize">{1.79769e+308, 1.79769e+308}</string>
 				<object class="NSView" key="NSWindowView" id="459481451">
 					<reference key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
@@ -1358,6 +1359,26 @@
 								<string key="NSContents">Send Bug Report</string>
 								<reference key="NSSupport" ref="601499137"/>
 								<reference key="NSControlView" ref="451164163"/>
+								<int key="NSButtonFlags">-2038284033</int>
+								<int key="NSButtonFlags2">129</int>
+								<string key="NSAlternateContents"/>
+								<string key="NSKeyEquivalent"/>
+								<int key="NSPeriodicDelay">200</int>
+								<int key="NSPeriodicInterval">25</int>
+							</object>
+						</object>
+						<object class="NSButton" id="938849774">
+							<reference key="NSNextResponder" ref="459481451"/>
+							<int key="NSvFlags">268</int>
+							<string key="NSFrame">{{14, 12}, {185, 32}}</string>
+							<reference key="NSSuperview" ref="459481451"/>
+							<bool key="NSEnabled">YES</bool>
+							<object class="NSButtonCell" key="NSCell" id="1034332516">
+								<int key="NSCellFlags">67239424</int>
+								<int key="NSCellFlags2">134217728</int>
+								<string key="NSContents">Crash application :)</string>
+								<reference key="NSSupport" ref="601499137"/>
+								<reference key="NSControlView" ref="938849774"/>
 								<int key="NSButtonFlags">-2038284033</int>
 								<int key="NSButtonFlags2">129</int>
 								<string key="NSAlternateContents"/>
@@ -2078,6 +2099,14 @@
 						<reference key="destination" ref="451164163"/>
 					</object>
 					<int key="connectionID">859</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">crash:</string>
+						<reference key="source" ref="70976226"/>
+						<reference key="destination" ref="938849774"/>
+					</object>
+					<int key="connectionID">862</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -3137,6 +3166,7 @@
 							<reference ref="126557954"/>
 							<reference ref="173695763"/>
 							<reference ref="451164163"/>
+							<reference ref="938849774"/>
 						</object>
 						<reference key="parent" ref="803057630"/>
 					</object>
@@ -3181,6 +3211,20 @@
 						<int key="objectID">856</int>
 						<reference key="object" ref="870253144"/>
 						<reference key="parent" ref="451164163"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">860</int>
+						<reference key="object" ref="938849774"/>
+						<object class="NSMutableArray" key="children">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="1034332516"/>
+						</object>
+						<reference key="parent" ref="459481451"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">861</int>
+						<reference key="object" ref="1034332516"/>
+						<reference key="parent" ref="938849774"/>
 					</object>
 				</object>
 			</object>
@@ -3394,8 +3438,6 @@
 					<string>82.ImportedFromIB2</string>
 					<string>83.IBPluginDependency</string>
 					<string>83.ImportedFromIB2</string>
-					<string>843.IBPluginDependency</string>
-					<string>846.IBPluginDependency</string>
 					<string>848.IBEditorWindowLastContentRect</string>
 					<string>848.IBPluginDependency</string>
 					<string>848.IBWindowTemplateEditedContentRect</string>
@@ -3407,6 +3449,8 @@
 					<string>854.IBPluginDependency</string>
 					<string>855.IBPluginDependency</string>
 					<string>856.IBPluginDependency</string>
+					<string>860.IBPluginDependency</string>
+					<string>861.IBPluginDependency</string>
 					<string>92.IBPluginDependency</string>
 					<string>92.ImportedFromIB2</string>
 				</object>
@@ -3618,12 +3662,12 @@
 					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<integer value="1"/>
+					<string>{{163, 444}, {213, 247}}</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{162, 667}, {213, 247}}</string>
-					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
-					<string>{{162, 667}, {213, 247}}</string>
+					<string>{{163, 444}, {213, 247}}</string>
 					<boolean value="YES"/>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3651,7 +3695,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">859</int>
+			<int key="maxID">862</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3659,6 +3703,10 @@
 				<object class="IBPartialClassDescription">
 					<string key="className">GBAppDelegate</string>
 					<string key="superclassName">NSObject</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">crash:</string>
+						<string key="NS.object.0">id</string>
+					</object>
 					<object class="NSMutableDictionary" key="outlets">
 						<string key="NS.key.0">openFeedback</string>
 						<string key="NS.object.0">OpenFeedback</string>

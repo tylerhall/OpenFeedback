@@ -14,4 +14,6 @@
 	IBOutlet OpenFeedback *openFeedback;
 }
 
+- (IBAction)crash:(id)sender;
+
 @end
