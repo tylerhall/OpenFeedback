@@ -58,8 +58,10 @@ static NSString *kGBLastCrashCheckTimeDefaultsKey = @"GBLastCrashCheckTime";
 	NSArray *logs = [self crashLogsSince:self.lastCrashCheckTime];
 	if ([logs count] > 0) {
 		NSString *report = [self latestCrashLogContents:logs];
+		[windowController presentFeedbackPanelForCrash:report];
 	}
-	self.lastCrashCheckTime = [NSDate date];
+//	self.lastCrashCheckTime = [NSDate date];
+	self.lastCrashCheckTime = [NSDate distantPast];
 }
 
 @end
@@ -80,7 +82,7 @@ static NSString *kGBLastCrashCheckTimeDefaultsKey = @"GBLastCrashCheckTime";
 		}
 	}
 	
-	if (latestFile) return [NSString stringWithContentsOfURL:latestFile encoding:NSUTF8StringEncoding error:nil];
+	if (latestFile) return [NSString stringWithContentsOfFile:latestFile encoding:NSUTF8StringEncoding error:nil];
 	return nil;
 }
 
@@ -98,7 +100,7 @@ static NSString *kGBLastCrashCheckTimeDefaultsKey = @"GBLastCrashCheckTime";
 			NSDirectoryEnumerator *enumerator = [manager enumeratorAtPath:crashPath];
 			NSString *prefix = [NSString stringWithFormat:@"%@_", appName];
 			while ((filename = [enumerator nextObject])) {
-				if (![filename hasPrefix:prefix]) continue;
+//				if (![filename hasPrefix:prefix]) continue;
 				if (![[filename pathExtension] isEqualToString:@"crash"]) continue;
 				
 				filename = [crashPath stringByAppendingPathComponent:filename];

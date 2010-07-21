@@ -17,6 +17,7 @@
 	IBOutlet NSView *viewSupport;
 	IBOutlet NSView *viewFeature;
 	IBOutlet NSView *viewBug;
+	IBOutlet NSView *viewCrash;
 
 	// Support Tab
 	IBOutlet NSTextView *txtQuestion;
@@ -30,16 +31,23 @@
 	IBOutlet NSTextView *txtStepsToReproduce;
 	IBOutlet NSButton *btnIsCritical;
 	
+	// Crash Report Tab
+	IBOutlet NSTextField *txtCrashTitle;
+	IBOutlet NSTextView *txtCrashDescription;
+	IBOutlet NSTextView *txtCrashStepsToReproduce;
+	
 	// All Tabs
 	IBOutlet NSButton *btnIncludeMyEmail;
 	IBOutlet NSComboBox *cboEmailAddress;
 	IBOutlet NSProgressIndicator *piStatus;
 	IBOutlet NSButton *btnSend;
+	BOOL _crashReportMode;
 }
 
 - (IBAction)presentFeedbackPanelForSupport:(id)sender;
 - (IBAction)presentFeedbackPanelForFeature:(id)sender;
 - (IBAction)presentFeedbackPanelForBug:(id)sender;
+- (void)presentFeedbackPanelForCrash:(NSString *)report;
 
 - (void)showFeedbackWindow;
 - (void) populateEmailAddresses;

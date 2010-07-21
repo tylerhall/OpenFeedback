@@ -8,6 +8,13 @@
 
 #import "OFController.h"
 
+@interface OFController ()
+
+- (void)presentFeedbackPanelForBugOrCrash;
+
+@end
+
+#pragma mark -
 
 @implementation OFController
 
@@ -15,6 +22,7 @@
 {	
 	[self populateEmailAddresses];
 	[[self window] setTitle:[NSString stringWithFormat:@"%@ Feedback", OFHostAppDisplayName()]];
+	[txtCrashTitle setStringValue:[NSString stringWithFormat:[txtCrashTitle stringValue], OFHostAppDisplayName()]];
 }
 
 - (IBAction)presentFeedbackPanelForSupport:(id)sender
@@ -37,11 +45,24 @@
 
 - (IBAction)presentFeedbackPanelForBug:(id)sender
 {
+	_crashReportMode = NO;
+	[self presentFeedbackPanelForBugOrCrash];
+}
+
+- (void)presentFeedbackPanelForCrash:(NSString *)report {
+	_crashReportMode = YES;
+	[self loadWindow];	// need to load otherwise IB links are not initalized
+	NSString *crashDescription = NSLocalizedString(@"\n\n\n\nThe text below is application's crash log, please leave it unchanged to help us determine possible cause!\n\n%@", nil);
+	[txtCrashDescription setString:[NSString stringWithFormat:crashDescription, report]];
+	[self presentFeedbackPanelForBugOrCrash];
+}
+
+- (void)presentFeedbackPanelForBugOrCrash {
 	[self showFeedbackWindow];
 	[tabs selectSegmentWithTag:2];
-	[tabView setContentView:viewBug];
+	[tabView setContentView:_crashReportMode ? viewCrash : viewBug];
 	[btnSend setEnabled:[self sendButtonIsEnabled]];
-	[[self window] makeFirstResponder:txtWhatHappened];
+	[[self window] makeFirstResponder:_crashReportMode ? txtCrashDescription : txtWhatHappened];
 }
 
 - (void)showFeedbackWindow
@@ -56,7 +77,7 @@
 	else if([tabs selectedSegment]== 1)
 		[self presentFeedbackPanelForFeature:self];
 	else if([tabs selectedSegment] == 2)
-		[self presentFeedbackPanelForBug:self];
+		[self presentFeedbackPanelForBugOrCrash];
 }
 
 - (IBAction)chkIncludeEmail:(id)sender
@@ -94,11 +115,17 @@
 
 	}
 
-	// Bug Report
+	// Bug or Crash Report
 	if([tabs selectedSegment] == 2)
 	{
-		if([[txtWhatHappened string] length] == 0)
-			isEnabled = NO;
+		if (_crashReportMode) {
+			if ([[txtCrashDescription string] length] == 0)
+				isEnabled = NO;
+		}
+		else {
+			if([[txtWhatHappened string] length] == 0)
+				isEnabled = NO;
+		}
 	}
 	
 	if([btnIncludeMyEmail state] == YES)
