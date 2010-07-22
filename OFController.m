@@ -50,7 +50,8 @@
 	[self presentFeedbackPanelForBugOrCrash];
 }
 
-- (void)presentFeedbackPanelForCrash:(NSString *)report {
+- (void)presentFeedbackPanelForCrash:(NSString *)report 
+{
 	_crashReportMode = YES;
 	[self loadWindow];	// need to load otherwise IB links are not initalized
 	[tabs setLabel:NSLocalizedString(@"Crash Report", nil) forSegment:2];
@@ -59,7 +60,8 @@
 	[self presentFeedbackPanelForBugOrCrash];
 }
 
-- (void)presentFeedbackPanelForBugOrCrash {
+- (void)presentFeedbackPanelForBugOrCrash 
+{
 	[self showFeedbackWindow];
 	[tabs selectSegmentWithTag:2];
 	[tabView setContentView:_crashReportMode ? viewCrash : viewBug];
@@ -120,12 +122,14 @@
 	// Bug or Crash Report
 	if([tabs selectedSegment] == 2)
 	{
-		if (_crashReportMode) {
-			if ([[txtCrashDescription string] length] == 0)
+		if (_crashReportMode) 
+		{
+			if ([[txtCrashDescription string] length] == 0) 
 				isEnabled = NO;
 		}
-		else {
-			if([[txtWhatHappened string] length] == 0)
+		else 
+		{
+			if([[txtWhatHappened string] length] == 0) 
 				isEnabled = NO;
 		}
 	}
@@ -189,12 +193,14 @@
 			break;
 			
 		case 2: // Bug or Crash Report
-			if (_crashReportMode) {
+			if (_crashReportMode) 
+			{
 				[dict setValue:@"bug" forKey:@"type"];
 				[dict setValue:[NSString stringWithFormat:@"Crash description:\n%@\n\nWhat steps will reproduce the problem?\n%@", [txtCrashDescription string], [txtCrashStepsToReproduce string]] forKey:@"message"];
 				[dict setValue:@"1" forKey:@"critical"];
 			}
-			else {
+			else 
+			{
 				[dict setValue:@"bug" forKey:@"type"];
 				[dict setValue:[NSString stringWithFormat:@"What did you expect to happen?\n%@\n\nWhat steps will reproduce the problem?\n%@", [txtWhatHappened string], [txtStepsToReproduce string]] forKey:@"message"];
 				if([btnIsCritical state] == YES) [dict setValue:@"1" forKey:@"critical"];
