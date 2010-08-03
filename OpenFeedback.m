@@ -137,7 +137,7 @@ static NSString *kGBLastCrashCheckTimeDefaultsKey = @"GBLastCrashCheckTime";
 
 - (BOOL)file:(NSString *)filename isNewerThan:(NSDate *)time 
 {
-	NSParameterAssert(time != nil);
+	if(!time) return YES;
 	NSDate *modificationDate = [self modificationTimeOfFile:filename];
 	if (!modificationDate) return YES;
 	if ([time compare:modificationDate] == NSOrderedDescending) return NO;
