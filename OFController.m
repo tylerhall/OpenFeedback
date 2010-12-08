@@ -6,6 +6,7 @@
 //  Copyright 2009 Click On Tyler, LLC. All rights reserved.
 //
 
+#import "OpenFeedback.h"
 #import "OFController.h"
 
 @interface OFController ()
@@ -159,19 +160,21 @@
 
 - (IBAction)sendFeedback:(id)sender
 {
+	BOOL delegateCanHandle = (self.delegate != nil);
+	
 	// Grab the URL to submit to...
 	NSDictionary *infoPlist = [[NSBundle mainBundle] infoDictionary];
 	NSString *submitFeedbackURL = [infoPlist objectForKey:@"OFSubmitFeedbackURL"];
-	if(submitFeedbackURL == nil) {
+	if(submitFeedbackURL == nil && !delegateCanHandle) {
 		NSLog(@"OpenFeedback Error: You must set OFSubmitFeedbackURL in Info.plist");
 		return;
 	}
 
 	[piStatus startAnimation:self];
-
+	
 	// Build our POST data dictionary
 	NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-
+	
 	[dict setValue:OFHostAppName() forKey:@"appname"];
 	[dict setValue:OFHostAppVersion() forKey:@"appversion"];
 	[dict setValue:OFCurrentSystemVersionString() forKey:@"systemversion"];
@@ -207,7 +210,16 @@
 			}
 			break;
 	}
-
+	
+	// Ask the delegate to handle the request. If the delegate returns NO, we should not handle request ourselves.
+	if (delegateCanHandle) {
+		if (![self.delegate openFeedback:self.openFeedback willSendData:dict]) {
+			[piStatus stopAnimation:self];
+			[[self window] close];
+			return;
+		}
+	}
+	
 	// Flatten dict into a url query string (this needs to be tested with special characters and other character enocdings)
 	NSMutableArray *info = [NSMutableArray array];
 	NSEnumerator *e = [dict keyEnumerator];
@@ -215,7 +227,7 @@
 	while(key = [e nextObject]) {
 		[info addObject:[NSString stringWithFormat:@"%@=%@", key, urlEscape([dict valueForKey:key])]];
 	}
-
+	
 	NSString *post = [info componentsJoinedByString:@"&"];
 	NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
 	NSString *postLength = [NSString stringWithFormat:@"%d", [postData length]];
@@ -228,15 +240,6 @@
 	[request setHTTPBody:postData];
 	
 	[NSURLConnection connectionWithRequest:request delegate:self];
-}
-
-NSString *urlEscape(NSString *str)
-{
-	// I doubt this is super robust, but it works for now :-)
-	NSMutableString *ret = [NSMutableString stringWithString:str];
-	[ret replaceOccurrencesOfString:@"&" withString:@"%26" options:NSLiteralSearch range:NSMakeRange(0, [ret length])];
-	[ret replaceOccurrencesOfString:@"=" withString:@"%3d" options:NSLiteralSearch range:NSMakeRange(0, [ret length])];
-	return ret;
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
@@ -275,5 +278,17 @@ NSString *urlEscape(NSString *str)
 		[[self window] close];
 	}
 }
+
+NSString *urlEscape(NSString *str)
+{
+	// I doubt this is super robust, but it works for now :-)
+	NSMutableString *ret = [NSMutableString stringWithString:str];
+	[ret replaceOccurrencesOfString:@"&" withString:@"%26" options:NSLiteralSearch range:NSMakeRange(0, [ret length])];
+	[ret replaceOccurrencesOfString:@"=" withString:@"%3d" options:NSLiteralSearch range:NSMakeRange(0, [ret length])];
+	return ret;
+}
+
+@synthesize openFeedback;
+@synthesize delegate;
 
 @end

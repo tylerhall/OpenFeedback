@@ -38,20 +38,24 @@ static NSString *kGBLastCrashCheckTimeDefaultsKey = @"GBLastCrashCheckTime";
 		path = [framework pathForResource:@"OpenFeedback" ofType:@"nib"];
 	}	
 	windowController = [[OFController alloc] initWithWindowNibName:@"OpenFeedback"];
+	windowController.openFeedback = self;
 }
 
 - (IBAction)presentFeedbackPanelForSupport:(id)sender
 {
+	windowController.delegate = self.delegate;
 	[windowController presentFeedbackPanelForSupport:self];
 }
 
 - (IBAction)presentFeedbackPanelForFeature:(id)sender
 {
+	windowController.delegate = self.delegate;
 	[windowController presentFeedbackPanelForFeature:self];
 }
 
 - (IBAction)presentFeedbackPanelForBug:(id)sender
 {
+	windowController.delegate = self.delegate;
 	[windowController presentFeedbackPanelForBug:self];
 }
 
@@ -61,10 +65,13 @@ static NSString *kGBLastCrashCheckTimeDefaultsKey = @"GBLastCrashCheckTime";
 	if ([logs count] > 0)
 	{
 		NSString *report = [self latestCrashLogContents:logs];
+		windowController.openFeedback = self;
 		[windowController presentFeedbackPanelForCrash:report];
 	}
 	self.lastCrashCheckTime = [NSDate date];
 }
+
+@synthesize delegate;
 
 @end
 

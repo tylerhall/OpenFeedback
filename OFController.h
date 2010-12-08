@@ -10,6 +10,8 @@
 #import <AddressBook/AddressBook.h>
 #import "OFUtilities.h"
 
+@protocol OpenFeedbackDelegate;
+
 @interface OFController : NSWindowController {
 	// Fake Tab Control
 	IBOutlet NSSegmentedControl *tabs;
@@ -42,6 +44,10 @@
 	IBOutlet NSProgressIndicator *piStatus;
 	IBOutlet NSButton *btnSend;
 	BOOL _crashReportMode;
+	
+	// Miscellaneous
+	id openFeedback;
+	id<OpenFeedbackDelegate> delegate;
 }
 
 - (IBAction)presentFeedbackPanelForSupport:(id)sender;
@@ -56,5 +62,8 @@
 - (BOOL)sendButtonIsEnabled;
 - (IBAction)sendFeedback:(id)sender;
 NSString *urlEscape(NSString *str);
+
+@property (assign) id openFeedback;
+@property (assign) id<OpenFeedbackDelegate> delegate;
 
 @end
