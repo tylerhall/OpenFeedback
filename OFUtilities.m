@@ -30,8 +30,9 @@ id OFInfoValueForKey(NSString *key)
 
 NSString *OFHostAppName()
 {
-	if (OFInfoValueForKey(@"CFBundleName")) { return OFInfoValueForKey(@"CFBundleName"); }
-	return [[[NSFileManager defaultManager] displayNameAtPath:[[NSBundle mainBundle] bundlePath]] stringByDeletingPathExtension];
+       if (OFInfoValueForKey(@"CFBundleExecutable")) { return OFInfoValueForKey(@"CFBundleExecutable"); }
+       if (OFInfoValueForKey(@"CFBundleName")) { return OFInfoValueForKey(@"CFBundleName"); }
+       return [[[NSFileManager defaultManager] displayNameAtPath:[[NSBundle mainBundle] bundlePath]] stringByDeletingPathExtension];
 }
 
 NSString *OFHostAppDisplayName()
