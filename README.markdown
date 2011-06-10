@@ -27,6 +27,7 @@ INSTALL
  3. Drag a generic Object (a blue cube) from the Library to your document.
  4. Select this object in your document window, and under the Information tab of the inspector, set the class of the object to OpenFeedback. This will instantiate your OpenFeedback object.
  5. Make a "Send Feedback..." menu item in the application menu; set its target to the OpenFeedback instance and its action to the appropriate presentFeedbackPanel...: action.
+ 6. Create a OFSubmitFeedbackURL string key in your Info.plist. It should be the full URL that OpenFeedback will deliver your feedback reports to.
 
 You're done!
 
