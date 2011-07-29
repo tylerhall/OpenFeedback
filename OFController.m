@@ -101,6 +101,11 @@
 	[btnSend setEnabled:[self sendButtonIsEnabled]];
 }
 
+- (void)controlTextDidChange:(NSNotification *)notification
+{
+	[btnSend setEnabled:[self sendButtonIsEnabled]];
+}
+
 - (BOOL)sendButtonIsEnabled
 {
 	BOOL isEnabled = YES;
@@ -262,7 +267,7 @@
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
 	[piStatus stopAnimation:self];
-	
+    	
 	NSAlert *alert = [[[NSAlert alloc] init] autorelease];
 	[alert addButtonWithTitle:@"OK"];
 	[alert setMessageText:@"Can't Send Feedback"];
