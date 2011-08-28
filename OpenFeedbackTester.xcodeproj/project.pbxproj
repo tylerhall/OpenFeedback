@@ -1,0 +1,314 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C6593BBF1405F0B6007738E8 /* COTOpenFeedbackWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6593BBE1405F0B6007738E8 /* COTOpenFeedbackWindowController.m */; };
+		C6593BC21405F44D007738E8 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6593BC11405F44D007738E8 /* Quartz.framework */; };
+		C6CB7A891405EB2D00D018C8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6CB7A881405EB2D00D018C8 /* Cocoa.framework */; };
+		C6CB7A931405EB2D00D018C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6CB7A911405EB2D00D018C8 /* InfoPlist.strings */; };
+		C6CB7A961405EB2D00D018C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CB7A951405EB2D00D018C8 /* main.m */; };
+		C6CB7A991405EB2D00D018C8 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C6CB7A971405EB2D00D018C8 /* Credits.rtf */; };
+		C6CB7A9C1405EB2D00D018C8 /* OpenFeedbackTesterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CB7A9B1405EB2D00D018C8 /* OpenFeedbackTesterAppDelegate.m */; };
+		C6CB7A9F1405EB2D00D018C8 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6CB7A9D1405EB2D00D018C8 /* MainMenu.xib */; };
+		C6CB7AA91405EBC200D018C8 /* COTOpenFeedback.m in Sources */ = {isa = PBXBuildFile; fileRef = C6CB7AA81405EBC200D018C8 /* COTOpenFeedback.m */; };
+		C6CB7AAB1405EC4800D018C8 /* COTOpenFeedbackWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = C6CB7AAA1405EC4800D018C8 /* COTOpenFeedbackWindow.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C6593BBD1405F0B6007738E8 /* COTOpenFeedbackWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COTOpenFeedbackWindowController.h; sourceTree = "<group>"; };
+		C6593BBE1405F0B6007738E8 /* COTOpenFeedbackWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COTOpenFeedbackWindowController.m; sourceTree = "<group>"; };
+		C6593BC11405F44D007738E8 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		C6CB7A841405EB2D00D018C8 /* OpenFeedbackTester.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenFeedbackTester.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6CB7A881405EB2D00D018C8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		C6CB7A8B1405EB2D00D018C8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		C6CB7A8C1405EB2D00D018C8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		C6CB7A8D1405EB2D00D018C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C6CB7A901405EB2D00D018C8 /* OpenFeedbackTester-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OpenFeedbackTester-Info.plist"; sourceTree = "<group>"; };
+		C6CB7A921405EB2D00D018C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C6CB7A941405EB2D00D018C8 /* OpenFeedbackTester-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenFeedbackTester-Prefix.pch"; sourceTree = "<group>"; };
+		C6CB7A951405EB2D00D018C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C6CB7A981405EB2D00D018C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		C6CB7A9A1405EB2D00D018C8 /* OpenFeedbackTesterAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenFeedbackTesterAppDelegate.h; sourceTree = "<group>"; };
+		C6CB7A9B1405EB2D00D018C8 /* OpenFeedbackTesterAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpenFeedbackTesterAppDelegate.m; sourceTree = "<group>"; };
+		C6CB7A9E1405EB2D00D018C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		C6CB7AA71405EBC200D018C8 /* COTOpenFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COTOpenFeedback.h; sourceTree = "<group>"; };
+		C6CB7AA81405EBC200D018C8 /* COTOpenFeedback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COTOpenFeedback.m; sourceTree = "<group>"; };
+		C6CB7AAA1405EC4800D018C8 /* COTOpenFeedbackWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = COTOpenFeedbackWindow.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C6CB7A811405EB2D00D018C8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6593BC21405F44D007738E8 /* Quartz.framework in Frameworks */,
+				C6CB7A891405EB2D00D018C8 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C6CB7A791405EB2D00D018C8 = {
+			isa = PBXGroup;
+			children = (
+				C6CB7A8E1405EB2D00D018C8 /* OpenFeedbackTester */,
+				C6CB7A871405EB2D00D018C8 /* Frameworks */,
+				C6CB7A851405EB2D00D018C8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C6CB7A851405EB2D00D018C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C6CB7A841405EB2D00D018C8 /* OpenFeedbackTester.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6CB7A871405EB2D00D018C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6CB7A881405EB2D00D018C8 /* Cocoa.framework */,
+				C6CB7A8A1405EB2D00D018C8 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C6CB7A8A1405EB2D00D018C8 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6593BC11405F44D007738E8 /* Quartz.framework */,
+				C6CB7A8B1405EB2D00D018C8 /* AppKit.framework */,
+				C6CB7A8C1405EB2D00D018C8 /* CoreData.framework */,
+				C6CB7A8D1405EB2D00D018C8 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		C6CB7A8E1405EB2D00D018C8 /* OpenFeedbackTester */ = {
+			isa = PBXGroup;
+			children = (
+				C6CB7AA61405EB9100D018C8 /* OpenFeedback */,
+				C6CB7A9A1405EB2D00D018C8 /* OpenFeedbackTesterAppDelegate.h */,
+				C6CB7A9B1405EB2D00D018C8 /* OpenFeedbackTesterAppDelegate.m */,
+				C6CB7A9D1405EB2D00D018C8 /* MainMenu.xib */,
+				C6CB7A8F1405EB2D00D018C8 /* Supporting Files */,
+			);
+			path = OpenFeedbackTester;
+			sourceTree = "<group>";
+		};
+		C6CB7A8F1405EB2D00D018C8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C6CB7A901405EB2D00D018C8 /* OpenFeedbackTester-Info.plist */,
+				C6CB7A911405EB2D00D018C8 /* InfoPlist.strings */,
+				C6CB7A941405EB2D00D018C8 /* OpenFeedbackTester-Prefix.pch */,
+				C6CB7A951405EB2D00D018C8 /* main.m */,
+				C6CB7A971405EB2D00D018C8 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C6CB7AA61405EB9100D018C8 /* OpenFeedback */ = {
+			isa = PBXGroup;
+			children = (
+				C6CB7AA71405EBC200D018C8 /* COTOpenFeedback.h */,
+				C6CB7AA81405EBC200D018C8 /* COTOpenFeedback.m */,
+				C6CB7AAA1405EC4800D018C8 /* COTOpenFeedbackWindow.xib */,
+				C6593BBD1405F0B6007738E8 /* COTOpenFeedbackWindowController.h */,
+				C6593BBE1405F0B6007738E8 /* COTOpenFeedbackWindowController.m */,
+			);
+			path = OpenFeedback;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C6CB7A831405EB2D00D018C8 /* OpenFeedbackTester */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6CB7AA21405EB2D00D018C8 /* Build configuration list for PBXNativeTarget "OpenFeedbackTester" */;
+			buildPhases = (
+				C6CB7A801405EB2D00D018C8 /* Sources */,
+				C6CB7A811405EB2D00D018C8 /* Frameworks */,
+				C6CB7A821405EB2D00D018C8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenFeedbackTester;
+			productName = OpenFeedbackTester;
+			productReference = C6CB7A841405EB2D00D018C8 /* OpenFeedbackTester.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C6CB7A7B1405EB2D00D018C8 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C6CB7A7E1405EB2D00D018C8 /* Build configuration list for PBXProject "OpenFeedbackTester" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C6CB7A791405EB2D00D018C8;
+			productRefGroup = C6CB7A851405EB2D00D018C8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C6CB7A831405EB2D00D018C8 /* OpenFeedbackTester */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C6CB7A821405EB2D00D018C8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6CB7A931405EB2D00D018C8 /* InfoPlist.strings in Resources */,
+				C6CB7A991405EB2D00D018C8 /* Credits.rtf in Resources */,
+				C6CB7A9F1405EB2D00D018C8 /* MainMenu.xib in Resources */,
+				C6CB7AAB1405EC4800D018C8 /* COTOpenFeedbackWindow.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C6CB7A801405EB2D00D018C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6CB7A961405EB2D00D018C8 /* main.m in Sources */,
+				C6CB7A9C1405EB2D00D018C8 /* OpenFeedbackTesterAppDelegate.m in Sources */,
+				C6CB7AA91405EBC200D018C8 /* COTOpenFeedback.m in Sources */,
+				C6593BBF1405F0B6007738E8 /* COTOpenFeedbackWindowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C6CB7A911405EB2D00D018C8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6CB7A921405EB2D00D018C8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C6CB7A971405EB2D00D018C8 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6CB7A981405EB2D00D018C8 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		C6CB7A9D1405EB2D00D018C8 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6CB7A9E1405EB2D00D018C8 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C6CB7AA01405EB2D00D018C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C6CB7AA11405EB2D00D018C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C6CB7AA31405EB2D00D018C8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenFeedbackTester/OpenFeedbackTester-Prefix.pch";
+				INFOPLIST_FILE = "OpenFeedbackTester/OpenFeedbackTester-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C6CB7AA41405EB2D00D018C8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OpenFeedbackTester/OpenFeedbackTester-Prefix.pch";
+				INFOPLIST_FILE = "OpenFeedbackTester/OpenFeedbackTester-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C6CB7A7E1405EB2D00D018C8 /* Build configuration list for PBXProject "OpenFeedbackTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6CB7AA01405EB2D00D018C8 /* Debug */,
+				C6CB7AA11405EB2D00D018C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6CB7AA21405EB2D00D018C8 /* Build configuration list for PBXNativeTarget "OpenFeedbackTester" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6CB7AA31405EB2D00D018C8 /* Debug */,
+				C6CB7AA41405EB2D00D018C8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C6CB7A7B1405EB2D00D018C8 /* Project object */;
+}
