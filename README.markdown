@@ -6,7 +6,7 @@ Screenshots
 -------
 ![Support Request](http://cdn.tyler.fm/blog/of-question.png)
 ![Feature Request](http://cdn.tyler.fm/blog/of-feature.png)
-![Bug Report](http://cdn.tyler.fm/blog/of-bug.png)
+![Bug Report](http://cdn.clickontyler.com/blog/of-bug.png)
 ![Crash Report](http://cdn.tyler.fm/blog/of-crash.png)
 
 INSTALL
